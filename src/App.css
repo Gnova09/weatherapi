@@ -1,6 +1,8 @@
 .App{
     display: flex;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .Weathercontainers{

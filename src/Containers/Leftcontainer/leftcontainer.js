@@ -5,16 +5,15 @@ import "./leftcontainer.css"
     return(
         <div className="Leftcontainer">
             <div className="leftheader">
-                <button className="btm_search">Search for places</button>
-                <icon>i</icon>
+                <button className="btn_search">Search for places</button>
+                <span>i</span>
             </div>
             <div className="leftbody" >
-                <div className="weather_img">
+                <div className="weather_img" >
                     <img alt="weather" src={require('../../img/Shower.png')}/>
                 </div>
                 <div className="temp">
-                    <label>15</label>
-                    <label>°C</label>
+                    <h1>15ºC</h1>
                 </div>
                 <div>
                     <label>Shower</label>
@@ -22,7 +21,7 @@ import "./leftcontainer.css"
                         <span>today</span>
                         <span>fri. 5 jun</span>
                     </div>
-                    <icon>Helsinki</icon>
+                    <span>Helsinki</span>
                 </div>
             </div>
         </div>

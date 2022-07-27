@@ -1,4 +1,5 @@
 import React from "react";
+import "./leftcontainer.css"
 
  const Leftcontainer = () =>{
     return(
@@ -14,6 +15,14 @@ import React from "react";
                 <div className="temp">
                     <label>15</label>
                     <label>°C</label>
+                </div>
+                <div>
+                    <label>Shower</label>
+                    <div>
+                        <span>today</span>
+                        <span>fri. 5 jun</span>
+                    </div>
+                    <icon>Helsinki</icon>
                 </div>
             </div>
         </div>

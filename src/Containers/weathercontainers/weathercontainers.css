@@ -1,0 +1,61 @@
+.Weathercontainers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Grades{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 50px;
+    gap: 3%;
+}
+.Grades button{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+}
+.Grades .TempActive{
+    background-color: white;
+    color: black;
+}
+
+.TempNextDay{
+    width: 100%;
+    height: auto;
+}
+/* DAY CARD */
+.DayBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(2, 2, 74);
+    width: 10vw;
+    height: auto;
+    margin-left: 30px;
+}
+.img-box{
+    display: flex;
+    justify-content: center;
+}
+.img-box img{
+    width: 5vw;
+    height: auto;
+}
+.DayBox h1{
+    font-size: 1.5vw;
+}
+
+.TodayHighlights{
+    background-color:rgb(106, 1, 33);
+}

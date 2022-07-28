@@ -34,15 +34,49 @@
     justify-content: center;
     width: 100%;
     height: auto;
-    background-image: url( "../../img/Cloud-background.png");
+    background-image: url("../../img/Cloud-background.png");
     background-size:contain;
     background-repeat: no-repeat;
     opacity: 0.5;
-    
 }
 
 .weather_img img{
   width: 50%;
   height: auto;
   opacity: 1.0 !important;
+}
+
+.temp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    font-size: 50px;
+}
+.Leftcontainer .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+}
+.Leftcontainer .footer label{
+    font-size:  25px;
+    opacity: 0.5;
+}
+.Leftcontainer .footer div{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.Leftcontainer .footer div span{
+display: flex;
+flex-direction: row;
+gap: 0.5rem;
+opacity: 0.5;
 }

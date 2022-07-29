@@ -1,35 +1,25 @@
 import React from "react";
 import "./weathercontainers.css"
+import DayBox from "../../Components/DayBox/DayBox";
 
- const Weathercontainers = () =>{
-    return(
+const Weathercontainers = () => {
+    return (
         <div className="Weathercontainers">
             {/* 
             grados 
             Temp Prox
             Today highlights
             */}
-
-            <div className="Grades">
-                <button className="TempActive">ºC</button>
-                <button>ºF</button>
-            </div>
-            <div className="TempNextDay">
-                <div className="DayBox">
-                    
-                    <h1>Tommorrow</h1>
-                    <div className="img-box">
-                        <img alt="weather" src={require("../../img/Sleet.png")}/>
-                    </div>
-                    
-                    <h1>
-                        <span>16ºC</span>
-                        <span>16ºC</span>
-                    </h1>
+            <div>
+                <div className="Grades">
+                    <button className="TempActive">ºC</button>
+                    <button>ºF</button>
                 </div>
+                <div className="TempNextDay">
+                    <DayBox />
+                </div>
+                <div className="TodayHighlights">TODAY HIGHLIGHTS</div>
             </div>
-            <div className="TodayHighlights">TODAY HIGHLIGHTS</div>
-
         </div>
     );
 }

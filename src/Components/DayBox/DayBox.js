@@ -1,23 +1,26 @@
 import React from "react";
 import DayCard from "./DayCard";
-import { DaysData } from "../../constant/DaysData";
 
-const DayBox =()=>{
-    const CardList = DaysData.map((day,i)=>{
+
+const DayBox =({DayData})=>{
+    const CardList = DayData.map((days)=>{
+    
         return(
-            <DayCard 
-            day={day[i].day}
-            img={day[i].img}
-            firtsTemp={day[i].firtsTemp}
-            secondTemp={day[i].secondTemp}
+           <DayCard 
+                day={days.day}
+                img={days.img}
+                firtsTemp={days.firtsTemp}
+                secondTemp={days.secondTemp}
             />
-            )
+          
+        )
     })
     return(
         <div className="DayBox">
+           
             {CardList}
         </div>   
     );
 } 
-export default DayBox
+export default DayBox;
 

@@ -1,6 +1,8 @@
 import React from "react";
 import "./weathercontainers.css"
 import DayBox from "../../Components/DayBox/DayBox";
+import { daysData } from "../../constant/DaysData";
+import DayHighBox from "../../Components/ToDayHigh/DayHighBox";
 
 const Weathercontainers = () => {
     return (
@@ -16,9 +18,12 @@ const Weathercontainers = () => {
                     <button>ºF</button>
                 </div>
                 <div className="TempNextDay">
-                    <DayBox />
+                    <DayBox DayData={daysData}/>
                 </div>
-                <div className="TodayHighlights">TODAY HIGHLIGHTS</div>
+                <div className="TodayHighlights">
+                    
+                    <DayHighBox />
+                </div>
             </div>
         </div>
     );

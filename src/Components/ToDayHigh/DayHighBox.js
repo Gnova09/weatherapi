@@ -4,10 +4,11 @@ import { HighData } from "../../constant/HighLightsData";
 
 const DayHighBox = () =>{
     
-    const HighList = HighData.map((Values)=>{
+    const HighList = HighData.map((Values,i)=>{
         
         return(
            <DayHighCard 
+                key={i}
                 title={Values.title}
                 value={Values.valor}
                 unit={Values.unit}

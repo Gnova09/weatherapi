@@ -9,16 +9,18 @@ function App() {
   const { data, loading, error } = useFetch(url);
 
  if(!loading){
-  console.log(data.Result)
+  console.log(data)
  }
 
   return (
+
+    loading === true ? <label>Loading.... </label> :(
     <div className="App" >
 
       <Leftcontainer />
       <Weathercontainers />
 
-    </div>
+    </div>)
   );
 }
 

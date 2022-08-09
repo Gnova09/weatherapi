@@ -8,14 +8,10 @@ export default function useFetch(url) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const dato = {
-      name: "said",
-      id: 23
-  }
-
+  
   const options =  {
     method: 'GET', // POST, PUT, DELETE, etc.
-   
+    mode: "no-cors",
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',

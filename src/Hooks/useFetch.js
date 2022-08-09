@@ -7,27 +7,32 @@ export default function useFetch(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const options = {
-    'mode': 'no-cors',
-    'method': 'GET',
-    'headers': {
-    'Access-Control-Allow-Origin' : '*',
-    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
-    }
-}
 
-  useEffect( () => {
+  const dato = {
+      name: "said",
+      id: 23
+  }
+
+  const options =  {
+    method: 'GET', // POST, PUT, DELETE, etc.
+   
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    }
+  }
+
+  useEffect(   () => {
    
         setLoading(true);
-        console.log(loading);
-        
-        fetch(url,options) 
+        fetch(url,{options})
         .then(response => setData(response.json()))
         .catch(error => setError(error))
-        .finally(setLoading(false))
+        .finally(setLoading(false));
+
       // eslint-disable-next-line
-      
     },[url]); 
  
-  return {data, loading, error };
+  return {data, loading, error};
 }

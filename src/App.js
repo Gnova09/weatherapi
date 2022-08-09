@@ -4,21 +4,20 @@ import './App.css'
 import useFetch from "./Hooks/useFetch";
 import url from "./constant/WeatherAPI";
 
-function App() {
-  const {data,loading, error} = useFetch(url);
 
-  if(loading){
-    console.log(data);
-  }
-  console.log(data)
-  
+function App() {
+  const { data, loading, error } = useFetch(url);
+
+ if(!loading){
+  console.log(data.Result)
+ }
 
   return (
     <div className="App" >
-     
-          <Leftcontainer />
-          <Weathercontainers />
-      
+
+      <Leftcontainer />
+      <Weathercontainers />
+
     </div>
   );
 }

@@ -1,4 +1,4 @@
 import {useContext} from "react";
-import { DataConstext } from "../Context/DataContext";
-
-export default () => useContext(DataConstext);
+import DataContext from "../Context/DataContext";
+ // eslint-disable-next-line
+export default () => useContext(DataContext);

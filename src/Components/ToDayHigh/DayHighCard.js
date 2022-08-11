@@ -1,8 +1,9 @@
 import React from "react";
+import useData from "../../Hooks/useData";
 
 const DayHighCard = ({title,value,unit,other}) =>{
-    
-
+    const data = useData();
+    console.log(data );
    
     return(
         other===null ? 

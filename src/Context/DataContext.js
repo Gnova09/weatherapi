@@ -1,7 +1,7 @@
 import { createContext } from "react"
 
 
-export const DataConstext = createContext(
+ const DataContext = createContext(
     [
         {
             day: null,
@@ -28,4 +28,5 @@ export const DataConstext = createContext(
             secondTemp: null
         }
     ]
-)
+);
+export default DataContext;

@@ -3,8 +3,7 @@ import Weathercontainers from "./Containers/weathercontainers/weathercontainers"
 import './App.css'
 import useFetch from "./Hooks/useFetch";
 import url from "./constant/WeatherAPI";
-import { useContext } from "react";
-
+import DataContext from "./Context/DataContext";
 
 
 function App() {
@@ -12,6 +11,9 @@ function App() {
   
  if(data != null){
   console.log(data)
+ } 
+ if(error != null){
+  console.log(error);
  }
  
 
@@ -19,9 +21,10 @@ function App() {
 
     loading ? <label>Loading....</label> 
     :(<div className="App" >
-      
-      <Leftcontainer />
-      <Weathercontainers />
+      <DataContext.Provider value={data}>
+        <Leftcontainer />
+        <Weathercontainers />
+      </DataContext.Provider>
 
     </div>)
   );

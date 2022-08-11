@@ -5,7 +5,7 @@ export default function useFetch(url) {
   //PARAMETROS PARA PASAR AL FETCH
 
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(null);
   const [error, setError] = useState(null);
 
   
@@ -23,7 +23,8 @@ export default function useFetch(url) {
    
         setLoading(true);
         fetch(url,{options})
-        .then(response => setData(response.json()))
+        .then(response =>response.json())
+        .then(result => setData(result))
         .catch(error => setError(error))
         .finally(setLoading(false));
 

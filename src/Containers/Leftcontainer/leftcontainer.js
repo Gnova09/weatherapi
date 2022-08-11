@@ -7,7 +7,7 @@ import LeftBody from "../../Components/Leftbody/Leftbody";
     return(
         <div className="Leftcontainer">
            <Leftheader />
-            <LeftBody />
+            <LeftBody/>
         </div>
     );
 }

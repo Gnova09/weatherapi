@@ -1,6 +1,7 @@
 import React from "react";
 
-const LeftBody = () =>{
+function LeftBody() {
+    
     return(
         <div className="leftbody" >
                 <div className="weather_img" >

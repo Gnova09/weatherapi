@@ -1,11 +1,10 @@
 
-    const llave= "ca8261c2e28c4a08958175545220808";
-    const Country = "07112";
-    const days = "4";
-    const method = "forecast.json?";//forecast, current, etc...
+    const llave= "1d428f586565f70e62b1e82f8ebea597";
+    const Country = "London";
+    
 
     //DONT CHANGE BELOW//
-    const params = `${method}key=${llave}&q=${Country}&days=${days}`;
-    const url = `https://api.weatherapi.com/v1/${params}`;
+    
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${Country}&appid=${llave}`;
 
     export default url;

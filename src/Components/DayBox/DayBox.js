@@ -1,26 +1,31 @@
 import React from "react";
 import DayCard from "./DayCard";
+import Scroll from "../Scroll/Scroll";
+import useData from "../../Hooks/useData";
 
 
 const DayBox =({DayData})=>{
-    const CardList = DayData.map((days,i)=>{
+    const data = useData();
+    
+    const CardList = DayData.map((day,ID)=>{
     
         return(
            <DayCard 
-                key={i}
-                day={days.day}
-                img={days.img}
-                firtsTemp={days.firtsTemp}
-                secondTemp={days.secondTemp}
+                key={ID}
+                day={day.day}
+                img={day.img}
+                firtsTemp={day.firtsTemp}
+                secondTemp={day.secondTemp}
             />
           
         )
     })
     return(
+        <Scroll>
         <div className="DayBox">
-           
             {CardList}
-        </div>   
+        </div>  
+        </Scroll> 
     );
 } 
 export default DayBox;

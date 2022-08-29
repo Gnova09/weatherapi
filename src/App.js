@@ -8,7 +8,7 @@ import DataContext from "./Context/DataContext";
 
 function App() {
   const { data, loading, error } = useFetch(url);
-  const daysdata = [
+  /*const daysdata = [
     {
       day: "today",
       img: "Sleet",
@@ -21,10 +21,11 @@ function App() {
       firtsTemp: '16ºC',
       secondTemp: '11ºC'
     },
-  ];
+  ];*/
 
   if (data != null) {
     console.log(data)
+    
     
   }
   if (error != null) {
@@ -36,7 +37,7 @@ function App() {
 
     loading ? <label>Loading....</label>
       : (<div className="App" >
-        <DataContext.Provider value={daysdata}>
+        <DataContext.Provider value={data}>
           <Leftcontainer />
           <Weathercontainers />
         </DataContext.Provider>

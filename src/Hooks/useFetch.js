@@ -19,7 +19,7 @@ export default function useFetch(url) {
     }
   }
 
-  useEffect(   () => {
+  useEffect(() => {
    
         setLoading(true);
         fetch(url,{options})

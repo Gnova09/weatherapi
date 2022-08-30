@@ -14,12 +14,15 @@ const DayBox = () => {
 
     useEffect(() => {
         if (data != null) {
-        
+            
+
             setCarList(data.list.map((day, ID) => {
-                setdatacreate(datacreate.includes(day.dt_txt) ?  null : day.dt_txt);
-              
+             // let date  = day.dt_txt.split(" ",1)
+              const newdate = new Date(day.dt_txt) //CONVERTIMOS la fecha de 2022-8-31 a Wed Aug 31 2022
+              console.log(newdate);
+             
+
                 return (
-                   
                     <DayCard
                         key={ID}
                         day={day.dt_txt}
@@ -33,7 +36,7 @@ const DayBox = () => {
             )
             
         }setDataLoad(true);
-        console.log(datacreate)
+        
     }, [data])
 
     return (

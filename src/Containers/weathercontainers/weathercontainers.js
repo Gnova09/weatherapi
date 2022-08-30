@@ -10,7 +10,7 @@ const Weathercontainers = () => {
     return (
         <div className="Weathercontainers">
            
-            <div>
+            
                 <div className="Grades">
                     <button className="TempActive">ºC</button>
                     <button>ºF</button>
@@ -22,7 +22,7 @@ const Weathercontainers = () => {
                     
                     <DayHighBox />
                 </div>
-            </div>
+            
         </div>
     );
 }

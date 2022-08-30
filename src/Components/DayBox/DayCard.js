@@ -11,8 +11,8 @@ const DayCard =({day, img, firtsTemp, secondTemp})=>{
             </div>
 
              <h1 className="temp-box">
-               <span>{firtsTemp}</span>
-                <span>{secondTemp}</span> 
+               <span>{firtsTemp}ºC</span>
+                <span>{secondTemp}ºC</span> 
             </h1> 
         </div>   
     );

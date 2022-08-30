@@ -7,7 +7,6 @@
 
 .Weathercontainers{
     height: 100vh;
-    width: 100%;
     background:#100E1D;
 }
 @media screen and (max-width: 500px) {

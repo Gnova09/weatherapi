@@ -31,17 +31,17 @@ const HighData = [
 
 const DayHighBox = () => {
   const data = useData();
-  const {dataLoad,setDataLoad}=useState(false);
+  const [dataLoad, setDataLoad] = useState(false);
+  useEffect(() => {
+    if (data != null) {
+      HighData[0].valor = data.list[0].wind.speed
+      HighData[1].valor = data.list[0].main.humidity
+      HighData[2].valor = data.list[0].wind.gust
+      HighData[3].valor = data.list[0].main.pressure
+      setDataLoad(true)
+    }
+  },[data]) 
   
-  // useEffect(() => {
-  //    HighData[0].valor= data.list[0].wind.speed
-  //    HighData[1].valor= data.list[0].main.humidity
-  //    HighData[2].valor= data.list[0].wind.gust
-  //    HighData[3].valor= data.list[0].main.pressure 
-  // },[dataLoad])
-
-  console.log(HighData);
-
   const HighList = HighData.map((Values, ID) => {
     return (
       <DayHighCard
@@ -52,24 +52,13 @@ const DayHighBox = () => {
       />
     )
   })
-const {canRender,setCanRender} = useState(false);
-
-useEffect(()=>{
-  if(canRender){
-    return (
-      <div className="DayHighBox">
+   
+  return (
+    dataLoad===true ? 
+      (<div className="DayHighBox">
         <h1>TODAY HIGHLIGHTS</h1>
         <div>{HighList}</div>
-      </div>
-    )
-  }else{<>waiting</>}
-},[canRender])
-
-  return (
-    <div className="DayHighBox">
-      <h1>TODAY HIGHLIGHTS</h1>
-      <div>{HighList}</div>
-    </div>
+      </div> ):<>waiting</>
   );
 }
 export default DayHighBox

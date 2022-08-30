@@ -9,18 +9,14 @@ const Weathercontainers = () => {
    
     return (
         <div className="Weathercontainers">
-            {/* 
-            grados 
-            Temp Prox
-            Today highlights
-            */}
+           
             <div>
                 <div className="Grades">
                     <button className="TempActive">ºC</button>
                     <button>ºF</button>
                 </div>
                 <div className="TempNextDay">
-                    <DayBox DayData={daysData}/>
+                    <DayBox />
                 </div>
                 <div className="TodayHighlights">
                     

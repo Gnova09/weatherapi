@@ -8,30 +8,31 @@ import useData from "../../Hooks/useData";
 const DayBox = () => {
     const data = useData();
     const [dataLoad, setDataLoad] = useState(false);
-    const [datacreate,setdatacreate]=useState([]);
-    const [canrender,setCanrender]=useState(false);
     const [CardList, setCarList] = useState([]);
-
+    const options= { weekday: 'short',  month: 'short', day: 'numeric'}
+    
     useEffect(() => {
         if (data != null) {
-            
-
+            let lastday = new Date("");
             setCarList(data.list.map((day, ID) => {
-             // let date  = day.dt_txt.split(" ",1)
-              const newdate = new Date(day.dt_txt) //CONVERTIMOS la fecha de 2022-8-31 a Wed Aug 31 2022
-              console.log(newdate);
-             
-
-                return (
-                    <DayCard
-                        key={ID}
-                        day={day.dt_txt}
-                        img={"Sleet"}
-                        firtsTemp={day.main.temp_max}
-                        secondTemp={day.main.temp_min}
-                    />
-                )
-             
+                const newdate = new Date(day.dt_txt) //CONVERTIMOS la fecha de 2022-8-31 a Wed Aug 31 2022
+                 console.log("newdate" + newdate.getDay())
+                 console.log("lastday" + lastday.getDay())
+                if(lastday.getDay() != newdate.getDay()){
+                console.log(newdate.toLocaleDateString('en-us', options));
+                    lastday = newdate; 
+                    return (
+                     
+                        <DayCard
+                            key={ID}
+                            day={newdate.toLocaleDateString('en-us', options)}
+                            img={"Sleet"}
+                            firtsTemp={day.main.temp_max}
+                            secondTemp={day.main.temp_min}
+                        /> 
+                    )
+                    
+                }
             })
             )
             

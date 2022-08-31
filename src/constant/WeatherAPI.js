@@ -5,6 +5,6 @@
 
     //DONT CHANGE BELOW//
     
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${Country}&cnt=10&appid=${llave}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${Country}&appid=${llave}`;
 
     export default url;

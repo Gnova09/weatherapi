@@ -3,6 +3,7 @@
     height: auto;
     flex-direction: column;
     align-items: center;
+    width: -webkit-fill-available
 }
 
 .Grades{

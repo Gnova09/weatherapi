@@ -16,13 +16,11 @@ const DayBox = () => {
             let lastday = new Date("");
             setCarList(data.list.map((day, ID) => {
                 const newdate = new Date(day.dt_txt) //CONVERTIMOS la fecha de 2022-8-31 a Wed Aug 31 2022
-                 console.log("newdate" + newdate.getDay())
-                 console.log("lastday" + lastday.getDay())
-                if(lastday.getDay() != newdate.getDay()){
-                console.log(newdate.toLocaleDateString('en-us', options));
+                 
+                if(lastday.getDay() !== newdate.getDay()){
+                    console.log(newdate.toLocaleDateString('en-us', options));
                     lastday = newdate; 
                     return (
-                     
                         <DayCard
                             key={ID}
                             day={newdate.toLocaleDateString('en-us', options)}
@@ -32,7 +30,7 @@ const DayBox = () => {
                         /> 
                     )
                     
-                }
+                }else{return null}
             })
             )
             

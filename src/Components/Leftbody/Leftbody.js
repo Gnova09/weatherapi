@@ -1,14 +1,19 @@
 import React from "react";
+import useData from "../../Hooks/useData";
 
 function LeftBody() {
     
+    const data = useData();
+
+    if(data !== null){
+
     return(
         <div className="leftbody" >
                 <div className="weather_img" >
                     <img style={{"opacity": "1 !important"}} alt="weather" src={require('../../img/Shower.png')}/>
                 </div>
                 <div className="temp">
-                    <h1>15</h1>
+                    <h1>{data.list[0].main.temp}</h1>
                     <span>ºC</span>
                 </div>
                 <div className="footer">
@@ -23,5 +28,7 @@ function LeftBody() {
                 </div>
             </div>
     );
+ }else{ return <>Waiting...</>}
+
 }
 export default LeftBody;

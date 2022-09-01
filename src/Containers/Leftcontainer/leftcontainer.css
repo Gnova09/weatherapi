@@ -80,3 +80,6 @@ flex-direction: row;
 gap: 0.5rem;
 opacity: 0.5;
 }
+.leftbody .temp h1{
+    font-size: 3vw;
+}

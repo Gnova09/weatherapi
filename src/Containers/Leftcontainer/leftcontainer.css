@@ -21,7 +21,14 @@
     border: 1px solid red;
     border-radius: 60%;
 }
+.leftheader .btn_search{
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5vw;
+    background-color: coral;
+}
 
+/*LEFT BODY CSS*/
 .leftbody{
     display: flex;
     width: 100%;
@@ -83,3 +90,4 @@ opacity: 0.5;
 .leftbody .temp h1{
     font-size: 3vw;
 }
+

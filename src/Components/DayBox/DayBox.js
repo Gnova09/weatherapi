@@ -9,16 +9,17 @@ const DayBox = () => {
     const data = useData();
     const [dataLoad, setDataLoad] = useState(false);
     const [CardList, setCarList] = useState([]);
-    const options= { weekday: 'short',  month: 'short', day: 'numeric'}
+    
     
     useEffect(() => {
+        const options= { weekday: 'short',  month: 'short', day: 'numeric'}
         if (data != null) {
             let lastday = new Date("");
             setCarList(data.list.map((day, ID) => {
                 const newdate = new Date(day.dt_txt) //CONVERTIMOS la fecha de 2022-8-31 a Wed Aug 31 2022
                  
                 if(lastday.getDay() !== newdate.getDay()){
-                    console.log(newdate.toLocaleDateString('en-us', options));
+                   // console.log(newdate.toLocaleDateString('en-us', options));
                     lastday = newdate; 
                     return (
                         <DayCard

@@ -8,8 +8,8 @@ export default function useFetch(url) {
   const [loading, setLoading] = useState(null);
   const [error, setError] = useState(null);
 
-  
-  const options =  {
+
+  const options = {
     method: 'GET', // POST, PUT, DELETE, etc.
     mode: "no-cors",
     headers: {
@@ -20,16 +20,29 @@ export default function useFetch(url) {
   }
 
   useEffect(() => {
-   
-        setLoading(true);
-        fetch(url,{options})
-        .then(response =>response.json())
-        .then(result => setData(result))
-        .catch(error => setError(error))
-        .finally(setLoading(false));
 
-      // eslint-disable-next-line
-    },[url]); 
- 
-  return {data, loading, error};
+    setLoading(true);
+    fetch(url, { options })
+      .then(response => response.json())
+      .then(result => setData(result))
+      .catch(error => setError(error))
+      .finally(setLoading(false));
+
+    // eslint-disable-next-line
+  }, [url]);
+
+  function refetch () {
+    
+      setLoading(true);
+      fetch(url, { options })
+        .then(response => response.json())
+        .then(result => setData(result))
+        .catch(error => {
+          setError(error);
+          console.log(error)
+        })
+        .finally(setLoading(false));
+  }
+
+  return { data, loading, error,refetch };
 }

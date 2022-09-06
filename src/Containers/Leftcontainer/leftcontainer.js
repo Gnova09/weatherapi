@@ -1,29 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./leftcontainer.css"
 import Leftheader from "../../Components/Leftheader/Leftheader";
 import LeftBody from "../../Components/Leftbody/Leftbody";
+import LeftCountrys from "../../Components/LeftButton/LeftCountrys";
 
 
  const Leftcontainer = ({setCountry}) =>{
     const [onclickBotton, setOnclickBottom] = useState(false);
+   
 
-    const handleOnclick = () => {
-        onclickBotton ? setOnclickBottom(false): setOnclickBottom(true);
-        console.log(onclickBotton);
+    const handleOnClick = () => {
+        onclickBotton ? setOnclickBottom(false):setOnclickBottom(true);
+       // console.log(onclickBotton);
     } 
-
-    useEffect(()=>{
-        setCountry("München");
-        console.log("country")
-    },[onclickBotton])
 
     //////We changes this for below useEffect////////
     return (
         <div className="Leftcontainer">
-        <Leftheader handleOnclick ={handleOnclick} />
+        <Leftheader handleOnClick ={handleOnClick} />
         {onclickBotton ? 
-        <h1>Loading....</h1>
-          :<LeftBody/>}
+        <LeftCountrys setCountry={setCountry} handleOnClick={handleOnClick}/>
+        :<LeftBody/>}
        </div>
     );
 }

@@ -1,9 +1,9 @@
 import React from "react";
 
-const leftheader = ({handleOnclick}) =>{
+const leftheader = ({handleOnClick}) =>{
     return(
         <div className="leftheader">
-            <button onClick={handleOnclick} className="btn_search">Search for places</button>
+            <button onClick={handleOnClick} className="btn_search">More City</button>
             <span>i</span>
         </div>
     );

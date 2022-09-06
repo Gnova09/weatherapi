@@ -12,14 +12,13 @@ function App() {
   const [country, setCountry] = useState("London");
   useEffect(()=>{
     refetch();
+    console.log(country)
     // eslint-disable-next-line
   },[country]);
   /////GET DATA OF COUNTRY WEATHER/////////
-  const { data, loading, error, refetch } = useFetch(WeatherAPI(country));
-
-  const handleCountry = (Countryvalue) =>{
-    setCountry(Countryvalue);
-  }
+  const { data, loading, refetch } = useFetch(WeatherAPI(country));
+  //console.log(data);
+ 
 
   ////RENDER//////
   return (

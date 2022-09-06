@@ -4,7 +4,7 @@
     
 const WeatherAPI =(Country)=>{
     
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${Country}&appid=${Key}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${Country}&appid=${Key}&units=metric`;
         
     return url;
 }

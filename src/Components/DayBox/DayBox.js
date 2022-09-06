@@ -15,9 +15,10 @@ const DayBox = () => {
         const options= { weekday: 'short',  month: 'short', day: 'numeric'}
         if (data != null) {
             let lastday = new Date("");
+            
             setCarList(data.list.map((day, ID) => {
                 const newdate = new Date(day.dt_txt) //CONVERTIMOS la fecha de 2022-8-31 a Wed Aug 31 2022
-                 
+
                 if(lastday.getDay() !== newdate.getDay()){
                    // console.log(newdate.toLocaleDateString('en-us', options));
                     lastday = newdate; 
@@ -25,9 +26,9 @@ const DayBox = () => {
                         <DayCard
                             key={ID}
                             day={newdate.toLocaleDateString('en-us', options)}
-                            img={"Sleet"}
-                            firtsTemp={day.main.temp_max}
-                            secondTemp={day.main.temp_min}
+                            img={day.weather[0].icon}
+                            firtsTemp={parseInt(day.main.temp_max)}
+                            secondTemp={parseInt(day.main.temp_min)}
                         /> 
                     )
                     

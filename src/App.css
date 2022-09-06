@@ -3,11 +3,12 @@
     color: white;
     margin: 0;
     padding: 0;
+    background:#100E1D;
 }
 
 .Weathercontainers{
-    height: 100vh;
-    background:#100E1D;
+    height: auto;
+    
 }
 @media screen and (max-width: 500px) {
     .App {

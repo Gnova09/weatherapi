@@ -7,9 +7,8 @@ const DayCard =({day, img, firtsTemp, secondTemp})=>{
         <div className="DayCard">
                 <h1>{day}</h1> 
             <div className="img-box">
-                <img  src={require(`../../img/${img}.png`)} alt="weather"/> 
+                <img  src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="weather"/> 
             </div>
-
              <h1 className="temp-box">
                <span>{firtsTemp}ºC</span>
                 <span>{secondTemp}ºC</span> 

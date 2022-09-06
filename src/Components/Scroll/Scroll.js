@@ -6,10 +6,11 @@ const styles = {
     height: 'auto', 
     display: 'flex',
     margin:'25px'
+
 }
 const Scroll = (props) => {
     return(
-        <div style={styles}>
+        <div className="scroll" style={styles}>
             {props.children}
         </div>
     )

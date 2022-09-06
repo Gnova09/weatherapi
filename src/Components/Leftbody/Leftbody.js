@@ -8,15 +8,16 @@ function LeftBody() {
 
     if (data !== null) {
         const newdate = new Date(data.list[0].dt_txt)
-        console.log(data)
+        const icon = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`
+        
         return (
             <div className="leftbody" >
                 <div className="weather_img" >
-                    <img style={{ "opacity": "1 !important" }} alt="weather" src={require('../../img/Shower.png')} />
+                    <img style={{ "opacity": "1 !important" }} alt="weather" src={icon} />
                 </div>
                 <div className="temp">
-                    <h1>{data.list[0].main.temp}</h1>
-                    <span>ºC</span>
+                    <h1>{parseInt(data.list[0].main.temp)}</h1>
+                    <h1>ºC</h1>
                 </div>
                 <div className="footer">
                     <label>Shower</label>

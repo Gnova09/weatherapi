@@ -6,7 +6,7 @@ import useData from "../../Hooks/useData";
 
 
 const DayBox = () => {
-    const data = useData();
+    const {data,units} = useData();
     const [dataLoad, setDataLoad] = useState(false);
     const [CardList, setCarList] = useState([]);
     
@@ -29,6 +29,7 @@ const DayBox = () => {
                             img={day.weather[0].icon}
                             firtsTemp={parseInt(day.main.temp_max)}
                             secondTemp={parseInt(day.main.temp_min)}
+                            unit={units.grades}
                         /> 
                     )
                     
@@ -38,7 +39,7 @@ const DayBox = () => {
             
         }setDataLoad(true);
         
-    }, [data])
+    }, [data,units])
 
     return (
         dataLoad?

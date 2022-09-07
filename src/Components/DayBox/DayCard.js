@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const DayCard =({day, img, firtsTemp, secondTemp})=>{
+const DayCard =({day, img, firtsTemp, secondTemp, unit})=>{
     
     return(
         <div className="DayCard">
@@ -10,8 +10,8 @@ const DayCard =({day, img, firtsTemp, secondTemp})=>{
                 <img  src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="weather"/> 
             </div>
              <h1 className="temp-box">
-               <span>{firtsTemp}ºC</span>
-                <span>{secondTemp}ºC</span> 
+               <span>{firtsTemp}{unit}</span>
+                <span>{secondTemp}{unit}</span> 
             </h1> 
         </div>   
     );

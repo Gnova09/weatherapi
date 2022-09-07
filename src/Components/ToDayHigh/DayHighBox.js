@@ -7,7 +7,7 @@ const HighData = [
   {
     title: "Wind status",
     valor: "",
-    unit: "mph",
+    unit: "",
   },
   {
     title: "Humidity",
@@ -18,7 +18,7 @@ const HighData = [
   {
     title: "Visbility",
     valor: "",
-    unit: "miles",
+    unit: "",
     other: null
   },
   {
@@ -30,19 +30,25 @@ const HighData = [
 ]
 
 const DayHighBox = () => {
-  const data = useData();
+  const {data, units} = useData();
+
   const [dataLoad, setDataLoad] = useState(false);
+
   useEffect(() => {
     if (data != null) {
       HighData[0].valor = data.list[0].wind.speed
       HighData[1].valor = data.list[0].main.humidity
       HighData[2].valor = data.list[0].wind.gust
       HighData[3].valor = data.list[0].main.pressure
+      HighData[0].unit = units.wind
+      HighData[2].unit = units.visibi
+      console.log(units.wind)
       setDataLoad(true)
     }
-  },[data]) 
+  },[data,units]) 
   
   const HighList = HighData.map((Values, ID) => {
+
     return (
       <DayHighCard
         key={ID}

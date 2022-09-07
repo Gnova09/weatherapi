@@ -3,14 +3,22 @@ import "./weathercontainers.css"
 import DayBox from "../../Components/DayBox/DayBox";
 import DayHighBox from "../../Components/ToDayHigh/DayHighBox";
 
-const Weathercontainers = () => {
+const Weathercontainers = ({changesUnit}) => {
 
     return (
         <div className="Weathercontainers">
-            
             <div className="Grades">
-                <button className="TempActive">ºC</button>
-                <button>ºF</button>
+                <button
+                 onClick={()=>changesUnit(true)} 
+                 id="C" 
+                 className=" TempActive">
+                    ºC
+                </button>
+                <button 
+                 onClick={()=>changesUnit(false)} 
+                 id="F">
+                    ºF
+                </button>
             </div>
             <div className="TempNextDay">
                 <DayBox />

@@ -5,7 +5,8 @@ const styles = {
     overflowY: 'hidden',
     height: 'auto', 
     display: 'flex',
-    margin:'25px'
+    marginRight:'25px',
+    marginLeft:'25px'
 
 }
 const Scroll = (props) => {

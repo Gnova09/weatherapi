@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/wheatherapi/static/css/main.1ae219a0.css",
+    "main.js": "/wheatherapi/static/js/main.23093dcf.js",
+    "static/media/Cloud-background.png": "/wheatherapi/static/media/Cloud-background.f88244c26c2492e3c5f1.png",
+    "index.html": "/wheatherapi/index.html",
+    "main.1ae219a0.css.map": "/wheatherapi/static/css/main.1ae219a0.css.map",
+    "main.23093dcf.js.map": "/wheatherapi/static/js/main.23093dcf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ae219a0.css",
+    "static/js/main.23093dcf.js"
+  ]
+}
